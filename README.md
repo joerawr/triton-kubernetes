@@ -86,7 +86,7 @@ Follow the on screen instructions answering questions about the cluster. You can
 |--------------------------------------------------------------------------------|-------------------------------------------------------|----------------------|
 | Name your Global Cluster Manager                                               | global-cluster                                        | <kbd>enter</kbd>     |
 | Do you want to set up the Global Cluster Manager in HA mode                    |                                                       | yes                  |
-| Which Triton networks should be used for this environment                      | Joyent-SDC-Public                                     | <kbd>enter</kbd>     |
+| Which Triton networks should be used for this environment                      | external                                     | <kbd>enter</kbd>     |
 | Which Triton package should be used for Global Cluster Manager server(s)       | k4-highcpu-kvm-1.75G                                  | k4-highcpu-kvm-3.75G |
 | Which Triton package should be used for Global Cluster Manager database server | k4-highcpu-kvm-1.75G                                  | k4-highcpu-kvm-3.75G |
 | docker-engine install script                                                   | <https://releases.rancher.com/install-docker/17.03.sh> | <kbd>enter</kbd>     |
@@ -110,7 +110,7 @@ The Triton credentials are pulled from environment variables. If `eval "$(triton
 | Name your environment | triton-test | <kbd>enter</kbd> |
 | Do you want this environment to run in HA mode |  | yes |
 | Number of compute nodes for triton-test environment | 3 | <kbd>enter</kbd> |
-| Which Triton networks should be used for this environment | Joyent-SDC-Public | <kbd>enter</kbd> |
+| Which Triton networks should be used for this environment | external | <kbd>enter</kbd> |
 | Which Triton package should be used for triton-test environment etcd nodes | k4-highcpu-kvm-1.75G | k4-highcpu-kvm-3.75G |
 | Which Triton package should be used for triton-test environment orchestration nodes running apiserver/scheduler/controllermanager/... | k4-highcpu-kvm-1.75G | k4-highcpu-kvm-3.75G |
 | Which Triton package should be used for triton-test environment compute nodes | k4-highcpu-kvm-1.75G | k4-highcpu-kvm-3.75G |

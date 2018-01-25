@@ -292,19 +292,19 @@ getClusterManagerConfig() {
 		_gcm_node_count="$(getArgument "Number of cluster manager nodes for $_name Global Cluster Manager" "2")"
 	fi
 	echo "From below options:"
-	echo "Joyent-SDC-Public"
+	echo "external"
 	echo "Joyent-SDC-Private"
 	echo "Both"
-	_network_choice="$(getArgument "Which Triton networks should be used for this environment" "Joyent-SDC-Public")"
-	if [ "${_network_choice}" == "Joyent-SDC-Public" ]
+	_network_choice="$(getArgument "Which Triton networks should be used for this environment" "external")"
+	if [ "${_network_choice}" == "external" ]
 	then
-		_network_choice="triton_network_names = [ \"Joyent-SDC-Public\" ]"
+		_network_choice="triton_network_names = [ \"external\" ]"
 	elif [ "${_network_choice}" == "Joyent-SDC-Private" ]
 	then
 		_network_choice="triton_network_names = [ \"Joyent-SDC-Private\" ]"
 	elif [ "${_network_choice}" == "Both" ]
 	then
-		_network_choice="triton_network_names = [ \"Joyent-SDC-Public\", \"Joyent-SDC-Private\" ]"
+		_network_choice="triton_network_names = [ \"external\", \"Joyent-SDC-Private\" ]"
 	else
 		echo "error: no networks selected"
 	fi
@@ -403,19 +403,19 @@ getTritonEnvironmentConfig() {
 	fi
 	_compute_node_count="$(getArgument "Number of compute nodes for $_name environment" "3")"
 	echo "From below options:"
-	echo "Joyent-SDC-Public"
+	echo "external"
 	echo "Joyent-SDC-Private"
 	echo "Both"
-	_network_choice="$(getArgument "Which Triton networks should be used for this environment" "Joyent-SDC-Public")"
-	if [ "${_network_choice}" == "Joyent-SDC-Public" ]
+	_network_choice="$(getArgument "Which Triton networks should be used for this environment" "external")"
+	if [ "${_network_choice}" == "external" ]
 	then
-		_network_choice="triton_network_names = [ \"Joyent-SDC-Public\" ]"
+		_network_choice="triton_network_names = [ \"external\" ]"
 	elif [ "${_network_choice}" == "Joyent-SDC-Private" ]
 	then
 		_network_choice="triton_network_names = [ \"Joyent-SDC-Private\" ]"
 	elif [ "${_network_choice}" == "Both" ]
 	then
-		_network_choice="triton_network_names = [ \"Joyent-SDC-Public\", \"Joyent-SDC-Private\" ]"
+		_network_choice="triton_network_names = [ \"external\", \"Joyent-SDC-Private\" ]"
 	else
 		echo "error: no networks selected"
 	fi
