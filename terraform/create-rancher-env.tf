@@ -30,7 +30,7 @@ module "triton_example" {
   triton_ssh_user      = "ubuntu"
 
   triton_network_names = [
-    "Joyent-SDC-Public",
+    "external",
     "Joyent-SDC-Private",
   ]
 
