@@ -4,7 +4,7 @@ terraform {
   }
 }
 
-module "create_rancher-example" {
+module "create_rancher" {
   source = "./modules/triton-rancher"
 
   triton_network_names = ["external", "Joyent-SDC-Private"]
